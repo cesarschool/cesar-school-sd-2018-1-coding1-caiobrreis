@@ -7,13 +7,24 @@
  * Output: utilize a função printf da biblioteca stdio.h e escreva um número ou palavra por linha (\n):
  * 
  */
+int num = 1;
 void fizzBizz(int start, int end)
 {
-    printf("\nFizzBizz::START: %d, %d\n", start, end);
-    
-    // TODO: Your code here!
-    // Ex.: printf("Fizz\n");
-    
+  printf("\nFizzBizz::START: %d, %d\n", start, end);
+  for (num = start; num < end; num++) {
+    if ((num%3 == 0) && (num%5 != 0)) {
+      printf("Fizz\n");
+    }
+    else if ((num%3 != 0) && (num%5 == 0)) {
+      printf("Buzz\n");
+    }
+    else if ((num%3 == 0) && (num%5 == 0)) {
+      printf("FizzBuzz\n");
+    }
+    else {
+      printf("%d\n", num);
+      }
+    }
     printf("\nFizzBizz::END\n");
 }
 
